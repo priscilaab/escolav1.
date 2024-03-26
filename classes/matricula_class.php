@@ -15,7 +15,7 @@ class Matricula{
  
     // Ações (super poderes da classe):
     public function Inserir(){
-        $sql = "INSERT INTO matricula (id_matricula, id_docente_fk, id_curso_fk, data_matricula, status_matricula) VALUES(?,?,?,?,?)";
+        $sql = "INSERT INTO matricula (id_matricula, id_docente, id_curso, data_matricula, status_matricula) VALUES(?,?,?,?,?)";
         // Trabalhar com o banco:
         // Conectando:
         $banco = Banco::conectar();
@@ -56,7 +56,7 @@ class Matricula{
  
     public function Atualizar(){
         $banco = Banco::conectar();
-        $sql = "UPDATE matricula SET matricula = ?, docente = ?, curso = ?, data = ?, status = ? WHERE id_matricula = ?";
+        $sql = "UPDATE matricula SET matricula = ?, docente = ?, curso = ?, data_matricula = ?, status_matricula = ? WHERE id_matricula = ?";
         $banco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $comando = $banco->prepare($sql);
         $comando->execute(array($this->docente, $this->curso, $this->data, $this->status));

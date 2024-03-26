@@ -7,9 +7,9 @@ class Turma{
     // Atributos:
    
     public $id;
-    public $id_aluno_fk;
-    public $id_docente_fk4;
-    public $id_curso_fk;
+    public $id_aluno;
+    public $id_docente;
+    public $id_curso;
     public $horario;
     public $sala;
     public $capacidade_maxima;
@@ -19,14 +19,14 @@ class Turma{
  
     // Ações (super poderes da classe):
     public function Inserir(){
-        $sql = "INSERT INTO turma (id, id_aluno_fk, id_docente_fk4, id_curso_fk, horario, sala, capacidade_maxima) VALUES(?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO turma (id, id_aluno_fk, id_docente_fk4, id_curso_fk4, horario, sala, capacidade_maxima) VALUES(?,?,?,?,?,?,?)";
         // Trabalhar com o banco:
         // Conectando:
         $banco = Banco::conectar();
         // Transformar a string em comando sql:
         $comando = $banco->prepare($sql);
         // Executar e subsitituir os coringas (?):
-        $comando->execute(array($this->id, $this->id_aluno_fk, $this->id_docente_fk4, $this->id_curso_fk, $this->horario, $this->sala, $this->capacidade_maxima));
+        $comando->execute(array($this->id, $this->id_aluno, $this->id_docente, $this->id_curso, $this->horario, $this->sala, $this->capacidade_maxima));
         // Desconectar do banco:
         Banco::desconectar();
     }
@@ -60,10 +60,10 @@ class Turma{
  
     public function Atualizar(){
         $banco = Banco::conectar();
-        $sql = "UPDATE turma SET id_turma = ?, id_aluno_fk = ?, id_docente_fk4 = ? WHERE id_turma = ?";
+        $sql = "UPDATE turma SET id_turma = ?, id_aluno_fk= ?, id_docente_fk4 = ? WHERE id_turma = ?";
         $banco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $comando = $banco->prepare($sql);
-        $comando->execute(array($this->id, $this->id_aluno_fk, $this->id_docente_fk4));
+        $comando->execute(array($this->id, $this->id_aluno, $this->id_docente));
         Banco::desconectar();
         // Retornar quantidade de linhas alteradas:
         return $comando->rowCount();

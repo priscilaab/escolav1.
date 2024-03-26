@@ -3,7 +3,7 @@
  
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Importar a classe:
-        require_once('../classes/cursos_class.php');
+        require_once('../classes/curso_class.php');
  
  
  
@@ -28,7 +28,7 @@
          try{
             $c->Inserir();
             // header('Location: ../view/cad_docente_view.php?msg=6');
-            header('Location: ../cad_cursos_view.php?msg=6');
+            header('Location: ../cad_curso_view.php?msg=6');
             // header('Location: ../cad_docente.html');
            
            
@@ -36,7 +36,7 @@
            
            
           }catch(PDOException $e) {
-            header('Location: ../cad_cursos_view.php?erro=5');
+            header('Location: ../cad_curso_view.php?erro=5');
             // header('Location: ../cad_docente.html');
  
  
@@ -59,7 +59,7 @@
          
     //   </script>';
      
-      echo '<script>window.location.href = "../view/cad_cursos_view.php";</script>';
+      echo '<script>window.location.href = "../view/cad_curso_view.php";</script>';
  
  
  
