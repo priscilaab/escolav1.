@@ -43,6 +43,7 @@
                       <label for="exampleFormControlInput1" class="form-label">Especialização</label>
                       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="especializacao">
                     </div>  
+<<<<<<< HEAD
                     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Telefone Celular</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="tel1">
@@ -51,6 +52,8 @@
                     <label for="exampleFormControlInput1" class="form-label">Telefone</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="tel2">
                   </div>
+=======
+>>>>>>> c47b1710a452aa07ca8c6dc8858e60512306f8fb
  
                       <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-dark">Cadastrar</button>

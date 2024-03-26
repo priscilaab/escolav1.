@@ -73,6 +73,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Cep</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="cep">
                   </div>
+<<<<<<< HEAD
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Telefone Celular</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="tel1">
@@ -81,6 +82,9 @@
                     <label for="exampleFormControlInput1" class="form-label">Telefone</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="tel2">
                   </div>
+=======
+                   
+>>>>>>> c47b1710a452aa07ca8c6dc8858e60512306f8fb
                   <button type="submit" class="btn btn-dark">Cadastrar</button>                  
  
       </form> 
