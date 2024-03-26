@@ -25,13 +25,13 @@
         try{
             $c->Inserir();
             // header('Location: ../view/cad_docente_view.php?msg=6');
-            header('Location: ../view/cad_docente_view.php?msg=6');
+            header('Location: ../cad_docente_view.php?msg=6');
             // header('Location: ../cad_docente.html');
                 exit();
            
            
         }catch(PDOException $e) {
-            header('Location: ../view/cad_docente_view.php?erro=5');
+            header('Location: ../cad_docente_view.php?erro=5');
             // header('Location: ../cad_docente.html');
         }
 
